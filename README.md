@@ -69,11 +69,14 @@ flutter run \
 
 ## Icons & splash
 
-Rebuilt from SVG sources (Phase 1):
+All raster brand assets are generated from the SVG sources in
+`assets/brand/` — never edit PNGs by hand:
 
 ```sh
-python tool/generate_icons.py
-dart run flutter_launcher_icons
+pip install cairosvg pillow          # once; Windows also needs the GTK3
+                                     # runtime: winget install --id tschoonj.GTKForWindows
+python tool/generate_icons.py        # writes the 7 PNGs into assets/brand/
+dart run flutter_launcher_icons      # iOS + Android launcher icons
 dart run flutter_native_splash:create
 ```
 

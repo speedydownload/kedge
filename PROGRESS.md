@@ -49,7 +49,30 @@
   under Flutter 3.44.6's analyzer pins).
 - Dev machine is Windows; iOS builds/validation happen on the owner's Mac.
 
-## Phase 1 — Brand assets ⏳ next
+## Phase 1 — Brand assets ✅ (2026-08-20)
+
+**Done**
+- `assets/brand/logo.svg` (plumb bob, squircle ink bg, brass mark, brassDim
+  left facet via clip), `logo-mono.svg`, `wordmark.svg` — all geometric, no
+  image services.
+- `tool/generate_icons.py` (cairosvg + Pillow): writes all seven PNGs per
+  spec, prints each with dimensions, fails loudly on missing sources,
+  idempotent. Wordmark text drawn with the real Fraunces variable TTF at
+  wght 600 (Pillow), so no font-fallback risk.
+- Fraunces + Inter variable TTFs bundled (`assets/fonts/`), declared in
+  pubspec; typography pins the `wght` axis via FontVariation on every style.
+- `flutter_launcher_icons` (iOS 1024 no-alpha; Android adaptive fg/bg +
+  legacy) and `flutter_native_splash` (ink bg, mark image, dark variant,
+  Android 12) both configured and run. Icons visually verified from the
+  generated mipmap and iOS 1024 asset.
+
+**Notes**
+- Windows quirk: cairosvg needs the GTK3 runtime
+  (`winget install --id tschoonj.GTKForWindows`); the script prepends its
+  bin dir to PATH automatically. Documented in the script docstring.
+- Icon render on a real iOS simulator home screen still pending — needs the
+  owner's Mac (Windows dev box). Android icon verified from generated
+  assets; APK builds.
 ## Phase 2 — iOS blocking core
 ## Phase 3 — Data + domain
 ## Phase 4 — UI
