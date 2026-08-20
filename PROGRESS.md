@@ -73,7 +73,30 @@
 - Icon render on a real iOS simulator home screen still pending — needs the
   owner's Mac (Windows dev box). Android icon verified from generated
   assets; APK builds.
-## Phase 2 — iOS blocking core
+## Phase 2 — iOS blocking core 🔶 authored, awaiting Mac build (2026-08-20)
+
+**Done (authored on Windows, not yet compiled)**
+- `ios/Shared/SharedBlocking.swift`: App Group store (selections as
+  serialized FamilyActivitySelection, active session, schedules), Darwin
+  notification bridge, per-concern ManagedSettingsStore naming, shield
+  apply/lift incl. strict-mode denyAppRemoval.
+- `ios/Runner/Blocking/`: full platform-channel handler (authorization,
+  native FamilyActivityPicker presentation returning opaque id + counts,
+  startBlock/stopBlock, syncSchedules with per-weekday repeating
+  DeviceActivity schedules incl. overnight windows) and EventChannel fed by
+  Darwin notifications from the extensions.
+- Three extension targets' sources + Info.plists + entitlements:
+  DeviceActivityMonitor (applies/lifts shields while app is dead),
+  ShieldConfiguration (branded static shield), ShieldAction ("Not now"
+  closes; early-unlock signal stubbed for Phase 5).
+- `tool/setup_ios_targets.rb` (xcodeproj gem, idempotent) creates the three
+  targets, wires shared sources, entitlements, embed phase, iOS 16 floor.
+- `docs/ios-runbook.md`: exact Mac procedure incl. the 2-minute block proof.
+
+**Blocked**
+- Compile + on-device verification needs the owner's Mac (see runbook §6–7).
+- Known constraint: DeviceActivity intervals must be ≥ 15 min; short
+  sessions end via the app itself. Documented in code + runbook.
 ## Phase 3 — Data + domain
 ## Phase 4 — UI
 ## Phase 5 — Shield + friction
