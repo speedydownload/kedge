@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "app.ballast.android"
-    compileSdk = flutter.compileSdkVersion
+    compileSdk = 37 // flutter_secure_storage requires 37; revisit when flutter.compileSdkVersion catches up
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
