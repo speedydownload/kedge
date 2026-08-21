@@ -97,7 +97,33 @@
 - Compile + on-device verification needs the owner's Mac (see runbook §6–7).
 - Known constraint: DeviceActivity intervals must be ≥ 15 min; short
   sessions end via the app itself. Documented in code + runbook.
-## Phase 3 — Data + domain
+## Phase 3 — Data + domain ✅ (2026-08-21)
+
+**Done** (41 tests green, analyze clean)
+- `SessionMachine`: pure transition rules (scheduled→active→completed /
+  endedEarly / cancelled) with guards; completion timestamps use the
+  *scheduled* end so late expiry checks (force-quit, reboot) stay honest;
+  `held` = ran out with zero early unlocks.
+- `FrictionPolicy`: gentle (5-min pause, unlimited), firm (60 s forced
+  wait, 3/day), strict (40-char unambiguous passphrase, exact-match verify,
+  uninstall protection, cannot disable mid-session). All rules live here —
+  widgets only render rulings.
+- `StreakLogic`: pure day-key arithmetic; broken day zeroes current but
+  preserves longest; same-day holds count once.
+- Repositories: profiles (archive-not-delete, free-tier count helper),
+  sessions (transition persistence via SessionMachine), daily stats
+  (transactional upserts), streaks (single row through StreakLogic).
+- `SessionService`: orchestrates start / expire-sweep / two-step early
+  unlock (request ruling → execute effect) across DB + BlockingEngine with
+  an injected clock; covered end-to-end by tests with a fake engine
+  (in-memory Drift), including the 3-per-day firm limit and honest
+  held-seconds on early ends.
+- Riverpod providers for all repositories + service.
+
+**Stubbed**
+- Gentle-pause re-shield timer is native work (Phase 5); the service
+  records the pause and lifts the shield.
+- App-limit trigger accounting arrives with DeviceActivityEvent wiring.
 ## Phase 4 — UI
 ## Phase 5 — Shield + friction
 ## Phase 6 — Monetization + analytics
