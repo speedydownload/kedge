@@ -15,10 +15,10 @@ time; later builds only need steps 5–7.
 
 ## 2. One-time Apple portal setup
 
-1. Register bundle IDs: `app.ballast.ios`,
-   `app.ballast.ios.DeviceActivityMonitor`,
-   `app.ballast.ios.ShieldConfiguration`, `app.ballast.ios.ShieldAction`.
-2. Create App Group `group.app.ballast` and attach it to all four IDs.
+1. Register bundle IDs: `app.kedge.ios`,
+   `app.kedge.ios.DeviceActivityMonitor`,
+   `app.kedge.ios.ShieldConfiguration`, `app.kedge.ios.ShieldAction`.
+2. Create App Group `group.app.kedge` and attach it to all four IDs.
 3. Enable the Family Controls (development) capability on all four IDs.
 
 ## 3. Generate the workspace and add the extension targets
@@ -41,7 +41,7 @@ and run `pod install --project-directory=ios` (or just build; Flutter runs it).
 
 Open `ios/Runner.xcworkspace`. For **each of the four targets** under
 Signing & Capabilities: select your Team, confirm the App Group
-`group.app.ballast` and Family Controls capabilities are present (they come
+`group.app.kedge` and Family Controls capabilities are present (they come
 from the committed `.entitlements` files).
 
 ## 5. Build to a physical device
@@ -59,7 +59,7 @@ FamilyControls authorization prompts do not work on the simulator —
    button on the home screen if present) and approve Screen Time access.
 2. Pick 1–2 apps via the native picker.
 3. Start a 2-minute on-demand block.
-4. Expected: selected apps show the Ballast shield ("Blocked."), "Not now"
+4. Expected: selected apps show the Kedge shield ("Blocked."), "Not now"
    closes the shielded app. After the Flutter side calls stopBlock at the
    2-minute mark, apps open normally.
 5. Note: DeviceActivity end-callbacks require intervals ≥ 15 minutes, so

@@ -1,11 +1,11 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:ballast/app.dart';
+import 'package:kedge/app.dart';
 
 void main() {
   testWidgets('app boots to the empty home state', (tester) async {
-    await tester.pumpWidget(const ProviderScope(child: BallastApp()));
+    await tester.pumpWidget(const ProviderScope(child: KedgeApp()));
     await tester.pumpAndSettle();
 
     expect(find.text('Nothing blocked yet.'), findsOneWidget);

@@ -9,11 +9,11 @@ export '../../domain/enums.dart';
 part 'database.g.dart';
 
 @DriftDatabase(tables: [BlockProfiles, Sessions, DailyStats, Streaks])
-class BallastDatabase extends _$BallastDatabase {
-  BallastDatabase() : super(driftDatabase(name: 'ballast'));
+class KedgeDatabase extends _$KedgeDatabase {
+  KedgeDatabase() : super(driftDatabase(name: 'kedge'));
 
   /// In-memory database for tests.
-  BallastDatabase.forTesting(super.executor);
+  KedgeDatabase.forTesting(super.executor);
 
   @override
   int get schemaVersion => 1;

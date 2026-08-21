@@ -6,7 +6,7 @@ import '../db/database.dart';
 final class SessionRepository {
   SessionRepository(this._db);
 
-  final BallastDatabase _db;
+  final KedgeDatabase _db;
 
   Future<Session?> byId(int id) =>
       (_db.select(_db.sessions)..where((s) => s.id.equals(id))).getSingleOrNull();

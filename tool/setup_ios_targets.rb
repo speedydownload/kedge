@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-# Adds Ballast's three Screen Time extension targets to Runner.xcodeproj and
+# Adds Kedge's three Screen Time extension targets to Runner.xcodeproj and
 # wires the shared blocking sources into the Runner target.
 #
 # Run ON THE MAC, from the repo root, after `flutter build ios --config-only`:
@@ -18,15 +18,15 @@ TEAM_NOTE = 'Set your Apple Team for every target in Xcode > Signing & Capabilit
 EXTENSIONS = [
   {
     name: 'DeviceActivityMonitorExtension',
-    bundle_id: 'app.ballast.ios.DeviceActivityMonitor',
+    bundle_id: 'app.kedge.ios.DeviceActivityMonitor',
   },
   {
     name: 'ShieldConfigurationExtension',
-    bundle_id: 'app.ballast.ios.ShieldConfiguration',
+    bundle_id: 'app.kedge.ios.ShieldConfiguration',
   },
   {
     name: 'ShieldActionExtension',
-    bundle_id: 'app.ballast.ios.ShieldAction',
+    bundle_id: 'app.kedge.ios.ShieldAction',
   },
 ].freeze
 

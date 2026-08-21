@@ -5,8 +5,8 @@ import ManagedSettings
 import DeviceActivity
 import SwiftUI
 
-/// Dart side: MethodChannel('app.ballast/blocking') and
-/// EventChannel('app.ballast/blocking_events'). Method names and payload
+/// Dart side: MethodChannel('app.kedge/blocking') and
+/// EventChannel('app.kedge/blocking_events'). Method names and payload
 /// keys must stay in lock-step with lib/core/blocking/.
 @available(iOS 16.0, *)
 public final class BlockingChannelHandler: NSObject, FlutterPlugin, FlutterStreamHandler {
@@ -15,11 +15,11 @@ public final class BlockingChannelHandler: NSObject, FlutterPlugin, FlutterStrea
     public static func register(with registrar: FlutterPluginRegistrar) {
         let instance = BlockingChannelHandler()
         let methods = FlutterMethodChannel(
-            name: "app.ballast/blocking", binaryMessenger: registrar.messenger()
+            name: "app.kedge/blocking", binaryMessenger: registrar.messenger()
         )
         registrar.addMethodCallDelegate(instance, channel: methods)
         FlutterEventChannel(
-            name: "app.ballast/blocking_events", binaryMessenger: registrar.messenger()
+            name: "app.kedge/blocking_events", binaryMessenger: registrar.messenger()
         ).setStreamHandler(instance)
         instance.observeDarwinNotifications()
     }

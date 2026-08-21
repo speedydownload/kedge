@@ -13,8 +13,8 @@ import 'purchases/purchases_service.dart';
 part 'providers.g.dart';
 
 @Riverpod(keepAlive: true)
-BallastDatabase database(Ref ref) {
-  final db = BallastDatabase();
+KedgeDatabase database(Ref ref) {
+  final db = KedgeDatabase();
   ref.onDispose(db.close);
   return db;
 }

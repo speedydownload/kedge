@@ -15,7 +15,7 @@ Future<void> main() async {
   runApp(
     UncontrolledProviderScope(
       container: container,
-      child: const BallastApp(),
+      child: const KedgeApp(),
     ),
   );
 }

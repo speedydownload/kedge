@@ -16,7 +16,7 @@ final class ShieldConfigurationExtension: ShieldConfigurationDataSource {
     private static let textSecondary = UIColor(
         red: 0x98 / 255, green: 0xA2 / 255, blue: 0xAE / 255, alpha: 1)
 
-    private func ballastShield() -> ShieldConfiguration {
+    private func kedgeShield() -> ShieldConfiguration {
         DarwinNames.post(DarwinNames.shieldShown)
         let session = SharedStore.loadSession()
         let subtitleText: String
@@ -42,22 +42,22 @@ final class ShieldConfigurationExtension: ShieldConfigurationDataSource {
     }
 
     override func configuration(shielding application: Application) -> ShieldConfiguration {
-        ballastShield()
+        kedgeShield()
     }
 
     override func configuration(
         shielding application: Application, in category: ActivityCategory
     ) -> ShieldConfiguration {
-        ballastShield()
+        kedgeShield()
     }
 
     override func configuration(shielding webDomain: WebDomain) -> ShieldConfiguration {
-        ballastShield()
+        kedgeShield()
     }
 
     override func configuration(
         shielding webDomain: WebDomain, in category: ActivityCategory
     ) -> ShieldConfiguration {
-        ballastShield()
+        kedgeShield()
     }
 }

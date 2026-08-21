@@ -2,8 +2,8 @@ import 'dart:math';
 
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:ballast/domain/enums.dart';
-import 'package:ballast/domain/friction_policy.dart';
+import 'package:kedge/domain/enums.dart';
+import 'package:kedge/domain/friction_policy.dart';
 
 void main() {
   group('gentle', () {

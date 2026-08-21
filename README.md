@@ -1,11 +1,20 @@
-# Ballast
+# Kedge
 
-Ballast makes your phone boring for a while. That's the whole trick.
+Kedge makes your phone boring for a while. That's the whole trick.
 
 An offline-first Flutter app (iOS primary, Android second) that blocks
 selected apps on a schedule or on demand, and makes it deliberately annoying
 to unblock early. No accounts, no server — all user data lives on-device.
 The only network calls are RevenueCat (purchases) and PostHog (analytics).
+
+## App identity
+
+- On-device name: **Kedge** · App Store listing name: **Kedge: Screen Time
+  & Focus** (entered in App Store Connect, not stored in code)
+- Bundle IDs: `app.kedge.ios` / `app.kedge.android` · App Group `group.app.kedge`
+- Support: support@kedgefocus.com · Privacy policy: https://kedgefocus.com
+- Formerly "Ballast"; renamed 2026-08-21 over a USPTO trademark conflict.
+  The old identifiers never shipped.
 
 ## Repo layout
 
@@ -59,10 +68,10 @@ flutter run \
 
 ### RevenueCat setup (from scratch)
 
-1. Create a RevenueCat project with an iOS app (`app.ballast.ios`) and an
-   Android app (`app.ballast.android`).
-2. Products: `ballast_monthly` ($6.99/mo), `ballast_annual` ($34.99/yr,
-   3-day trial), `ballast_lifetime` ($79.99, win-back only).
+1. Create a RevenueCat project with an iOS app (`app.kedge.ios`) and an
+   Android app (`app.kedge.android`).
+2. Products: `kedge_monthly` ($6.99/mo), `kedge_annual` ($34.99/yr,
+   3-day trial), `kedge_lifetime` ($79.99, win-back only).
 3. Entitlement `pro` attached to all three products.
 4. Use Offerings for paywall configuration; the paywall widget (Phase 6)
    reads offering metadata so copy/pricing changes need no app release.

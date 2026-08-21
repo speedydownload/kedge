@@ -6,7 +6,7 @@ import '../db/database.dart';
 final class StatsRepository {
   StatsRepository(this._db);
 
-  final BallastDatabase _db;
+  final KedgeDatabase _db;
 
   Future<DailyStat?> forDay(String day) => (_db.select(_db.dailyStats)
         ..where((s) => s.day.equals(day)))
@@ -65,7 +65,7 @@ final class StatsRepository {
 final class StreakRepository {
   StreakRepository(this._db);
 
-  final BallastDatabase _db;
+  final KedgeDatabase _db;
 
   Future<Streak> load() =>
       (_db.select(_db.streaks)..where((s) => s.id.equals(0))).getSingle();

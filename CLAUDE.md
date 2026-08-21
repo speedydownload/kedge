@@ -1,4 +1,4 @@
-# CLAUDE.md — Ballast
+# CLAUDE.md — Kedge
 
 Read this first; it assumes zero context. Longer-form status lives in
 `PROGRESS.md` (per-phase, kept current), and the original full product spec
@@ -7,7 +7,7 @@ you need feature details not covered here or in code comments.
 
 ## What this is
 
-**Ballast** is an offline-first Flutter app (iOS primary, Android second)
+**Kedge** is an offline-first Flutter app (iOS primary, Android second)
 that blocks distracting apps on demand, on a schedule, or after a daily
 usage limit, and makes early unlocking deliberately annoying via three
 friction tiers (Gentle / Firm / Strict). No accounts, no backend; the only
@@ -15,9 +15,15 @@ network calls are RevenueCat (subscriptions, entitlement id `pro`) and
 PostHog analytics. Brand voice: calm, dry, no exclamation marks, no emoji,
 no dark patterns. Dark theme is primary; the mark is a brass plumb bob.
 
-Bundle IDs: `app.ballast.ios` (+ `.DeviceActivityMonitor`,
+Bundle IDs: `app.kedge.ios` (+ `.DeviceActivityMonitor`,
 `.ShieldConfiguration`, `.ShieldAction` extensions) and
-`app.ballast.android`. App Group: `group.app.ballast`.
+`app.kedge.android`. App Group: `group.app.kedge`.
+
+App identity: on-device name "Kedge"; App Store listing name
+"Kedge: Screen Time & Focus" (set in App Store Connect, not in code).
+Support: support@kedgefocus.com. Privacy policy: kedgefocus.com.
+History note: the app was renamed from "Ballast" on 2026-08-21 (USPTO
+trademark conflict); old bundle IDs/app group never shipped anywhere.
 
 ## Toolchain & pinned versions
 
@@ -103,8 +109,8 @@ docs/             entitlement-request.md (Apple filing text), ios-runbook.md
   entitlement requests (main app + each extension separately — approval
   does not cascade) must be filed by the owner; exact text in
   `docs/entitlement-request.md`. Gates TestFlight; review can take weeks.
-- Awaited from owner: Apple Team ID, RevenueCat public keys, PostHog key,
-  support email, privacy-policy domain.
+- Awaited from owner: Apple Team ID, RevenueCat public keys, PostHog key.
+  (Support email and privacy-policy domain are set — see App identity above.)
 
 ## Ground rules from the product owner
 

@@ -2,12 +2,12 @@ import 'package:drift/drift.dart' hide isNull;
 import 'package:drift/native.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:ballast/data/db/database.dart';
+import 'package:kedge/data/db/database.dart';
 
 void main() {
-  late BallastDatabase db;
+  late KedgeDatabase db;
 
-  setUp(() => db = BallastDatabase.forTesting(NativeDatabase.memory()));
+  setUp(() => db = KedgeDatabase.forTesting(NativeDatabase.memory()));
   tearDown(() => db.close());
 
   test('creates schema and seeds the singleton streak row', () async {

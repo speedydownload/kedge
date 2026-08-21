@@ -6,7 +6,7 @@ import FamilyControls
 import ManagedSettings
 
 enum AppGroup {
-    static let id = "group.app.ballast"
+    static let id = "group.app.kedge"
 
     static var defaults: UserDefaults {
         guard let d = UserDefaults(suiteName: id) else {
@@ -19,10 +19,10 @@ enum AppGroup {
 /// Darwin notification names used by extensions to poke the main app.
 /// Darwin notifications carry no payload — details go through the App Group.
 enum DarwinNames {
-    static let shieldShown = "app.ballast.shieldShown"
-    static let intervalStarted = "app.ballast.intervalStarted"
-    static let intervalEnded = "app.ballast.intervalEnded"
-    static let earlyUnlockRequested = "app.ballast.earlyUnlockRequested"
+    static let shieldShown = "app.kedge.shieldShown"
+    static let intervalStarted = "app.kedge.intervalStarted"
+    static let intervalEnded = "app.kedge.intervalEnded"
+    static let earlyUnlockRequested = "app.kedge.earlyUnlockRequested"
 
     static func post(_ name: String) {
         CFNotificationCenterPostNotification(

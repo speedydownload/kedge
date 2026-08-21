@@ -9,8 +9,8 @@ import 'blocking_engine.dart';
 base class MethodChannelBlockingEngine implements BlockingEngine {
   MethodChannelBlockingEngine();
 
-  static const _methods = MethodChannel('app.ballast/blocking');
-  static const _events = EventChannel('app.ballast/blocking_events');
+  static const _methods = MethodChannel('app.kedge/blocking');
+  static const _events = EventChannel('app.kedge/blocking_events');
 
   Stream<BlockingEvent>? _eventStream;
 

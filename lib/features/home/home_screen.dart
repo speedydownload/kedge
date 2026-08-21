@@ -13,13 +13,13 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(BallastSpacing.lg),
+          padding: const EdgeInsets.all(KedgeSpacing.lg),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Spacer(),
               Text('Nothing blocked yet.', style: textTheme.headlineLarge),
-              const SizedBox(height: BallastSpacing.sm),
+              const SizedBox(height: KedgeSpacing.sm),
               Text(
                 'Pick the apps that get you.',
                 style: textTheme.bodyMedium,
@@ -29,7 +29,7 @@ class HomeScreen extends StatelessWidget {
                 onPressed: null,
                 child: const Text('Start a block'),
               ),
-              const SizedBox(height: BallastSpacing.md),
+              const SizedBox(height: KedgeSpacing.md),
             ],
           ),
         ),

@@ -1,4 +1,4 @@
-package app.ballast.android
+package app.kedge.android
 
 import io.flutter.embedding.android.FlutterActivity
 

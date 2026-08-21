@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Rasterize the Ballast brand SVGs into every PNG the stores and build
+"""Rasterize the Kedge brand SVGs into every PNG the stores and build
 tools need. Idempotent: safe to re-run any time the SVGs change.
 
     python tool/generate_icons.py
@@ -121,7 +121,7 @@ def mark_cropped(height: int, svg: bytes) -> Image.Image:
 
 
 def wordmark(width: int = 2048) -> Image.Image:
-    """Mono mark + "Ballast" in Fraunces 600, laid out per wordmark.svg
+    """Mono mark + "Kedge" in Fraunces 600, laid out per wordmark.svg
     (mark 64 tall, 48px text, 24px gap, baseline on the bob's center),
     composed at 10x then resized to `width`."""
     s = 10  # working scale of the 80px-tall wordmark canvas
@@ -136,7 +136,7 @@ def wordmark(width: int = 2048) -> Image.Image:
     font.set_variation_by_axes(coords)
 
     gap = 24 * s
-    text = "Ballast"
+    text = "Kedge"
     bbox = font.getbbox(text)  # (x0, y0, x1, y1) relative to origin at ascender
     text_w = bbox[2] - bbox[0]
 

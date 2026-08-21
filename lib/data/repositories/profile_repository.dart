@@ -8,7 +8,7 @@ final class ProfileRepository {
   ProfileRepository(this._db, {DateTime Function()? now})
       : _now = now ?? DateTime.now;
 
-  final BallastDatabase _db;
+  final KedgeDatabase _db;
   final DateTime Function() _now;
 
   Stream<List<BlockProfile>> watchAll() => (_db.select(_db.blockProfiles)

@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:ballast/domain/enums.dart';
-import 'package:ballast/domain/session_machine.dart';
+import 'package:kedge/domain/enums.dart';
+import 'package:kedge/domain/session_machine.dart';
 
 void main() {
   final noon = DateTime(2026, 8, 21, 12);

@@ -1,5 +1,5 @@
-name: ballast
-description: "Ballast blocks distracting apps on a schedule or on demand, and makes it deliberately annoying to unblock early."
+name: kedge
+description: "Kedge blocks distracting apps on a schedule or on demand, and makes it deliberately annoying to unblock early."
 publish_to: 'none'
 
 version: 1.0.0+1

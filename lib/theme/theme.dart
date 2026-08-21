@@ -4,25 +4,25 @@ import 'tokens.dart';
 import 'typography.dart';
 
 /// Builds the two app themes from tokens. Dark is the default and primary.
-abstract final class BallastTheme {
+abstract final class KedgeTheme {
   static ThemeData dark() => _build(
         brightness: Brightness.dark,
-        background: BallastColors.ink,
-        surface: BallastColors.surface,
-        surfaceRaised: BallastColors.surfaceRaised,
-        textPrimary: BallastColors.textPrimary,
-        textSecondary: BallastColors.textSecondary,
-        divider: BallastColors.divider,
+        background: KedgeColors.ink,
+        surface: KedgeColors.surface,
+        surfaceRaised: KedgeColors.surfaceRaised,
+        textPrimary: KedgeColors.textPrimary,
+        textSecondary: KedgeColors.textSecondary,
+        divider: KedgeColors.divider,
       );
 
   static ThemeData light() => _build(
         brightness: Brightness.light,
-        background: BallastColors.inkLight,
-        surface: BallastColors.surfaceLight,
-        surfaceRaised: BallastColors.surfaceRaisedLight,
-        textPrimary: BallastColors.textPrimaryLight,
-        textSecondary: BallastColors.textSecondaryLight,
-        divider: BallastColors.dividerLight,
+        background: KedgeColors.inkLight,
+        surface: KedgeColors.surfaceLight,
+        surfaceRaised: KedgeColors.surfaceRaisedLight,
+        textPrimary: KedgeColors.textPrimaryLight,
+        textSecondary: KedgeColors.textSecondaryLight,
+        divider: KedgeColors.dividerLight,
       );
 
   static ThemeData _build({
@@ -35,15 +35,15 @@ abstract final class BallastTheme {
     required Color divider,
   }) {
     final onBrass =
-        brightness == Brightness.dark ? BallastColors.ink : BallastColors.inkLight;
+        brightness == Brightness.dark ? KedgeColors.ink : KedgeColors.inkLight;
     final colorScheme = ColorScheme(
       brightness: brightness,
-      primary: BallastColors.brass,
+      primary: KedgeColors.brass,
       onPrimary: onBrass,
-      secondary: BallastColors.teal,
+      secondary: KedgeColors.teal,
       onSecondary: onBrass,
-      error: BallastColors.clay,
-      onError: BallastColors.textPrimary,
+      error: KedgeColors.clay,
+      onError: KedgeColors.textPrimary,
       surface: surface,
       onSurface: textPrimary,
       surfaceContainerHighest: surfaceRaised,
@@ -59,41 +59,41 @@ abstract final class BallastTheme {
       dividerColor: divider,
       splashFactory: NoSplash.splashFactory,
       textTheme: TextTheme(
-        displaySmall: BallastType.display(textPrimary),
-        headlineLarge: BallastType.h1(textPrimary),
-        headlineMedium: BallastType.h2(textPrimary),
-        titleMedium: BallastType.h3(textPrimary),
-        bodyLarge: BallastType.body(textPrimary),
-        bodyMedium: BallastType.body(textSecondary),
-        labelLarge: BallastType.bodyMedium(textPrimary),
-        bodySmall: BallastType.caption(textSecondary),
-        labelSmall: BallastType.micro(textSecondary),
+        displaySmall: KedgeType.display(textPrimary),
+        headlineLarge: KedgeType.h1(textPrimary),
+        headlineMedium: KedgeType.h2(textPrimary),
+        titleMedium: KedgeType.h3(textPrimary),
+        bodyLarge: KedgeType.body(textPrimary),
+        bodyMedium: KedgeType.body(textSecondary),
+        labelLarge: KedgeType.bodyMedium(textPrimary),
+        bodySmall: KedgeType.caption(textSecondary),
+        labelSmall: KedgeType.micro(textSecondary),
       ),
       appBarTheme: AppBarTheme(
         backgroundColor: background,
         foregroundColor: textPrimary,
         elevation: 0,
         centerTitle: false,
-        titleTextStyle: BallastType.h2(textPrimary),
+        titleTextStyle: KedgeType.h2(textPrimary),
       ),
       cardTheme: CardThemeData(
         color: surface,
         elevation: 0,
         margin: EdgeInsets.zero,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(BallastRadii.lg),
+          borderRadius: BorderRadius.circular(KedgeRadii.lg),
         ),
       ),
       filledButtonTheme: FilledButtonThemeData(
         style: FilledButton.styleFrom(
-          backgroundColor: BallastColors.brass,
+          backgroundColor: KedgeColors.brass,
           foregroundColor: onBrass,
-          disabledBackgroundColor: BallastColors.brassDim,
+          disabledBackgroundColor: KedgeColors.brassDim,
           minimumSize: const Size.fromHeight(52),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(BallastRadii.md),
+            borderRadius: BorderRadius.circular(KedgeRadii.md),
           ),
-          textStyle: BallastType.bodyMedium(onBrass),
+          textStyle: KedgeType.bodyMedium(onBrass),
         ),
       ),
     );

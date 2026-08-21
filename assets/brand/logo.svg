@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
-  <!-- Ballast mark: a plumb bob — a weight on a line that always points true. -->
+  <!-- Kedge mark: a plumb bob — a weight on a line that always points true. -->
   <defs>
     <clipPath id="bobClip">
       <path d="M 256,196 C 292,202 322,232 322,268 L 256,416 L 190,268 C 190,232 220,202 256,196 Z"/>

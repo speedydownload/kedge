@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "app.ballast.android"
+    namespace = "app.kedge.android"
     compileSdk = 37 // flutter_secure_storage requires 37; revisit when flutter.compileSdkVersion catches up
     ndkVersion = flutter.ndkVersion
 
@@ -15,7 +15,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "app.ballast.android"
+        applicationId = "app.kedge.android"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion

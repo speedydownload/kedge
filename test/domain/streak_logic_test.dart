@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:ballast/domain/streak_logic.dart';
+import 'package:kedge/domain/streak_logic.dart';
 
 void main() {
   test('dayKey formats local dates', () {

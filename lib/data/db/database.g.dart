@@ -2205,9 +2205,9 @@ class StreaksCompanion extends UpdateCompanion<Streak> {
   }
 }
 
-abstract class _$BallastDatabase extends GeneratedDatabase {
-  _$BallastDatabase(QueryExecutor e) : super(e);
-  $BallastDatabaseManager get managers => $BallastDatabaseManager(this);
+abstract class _$KedgeDatabase extends GeneratedDatabase {
+  _$KedgeDatabase(QueryExecutor e) : super(e);
+  $KedgeDatabaseManager get managers => $KedgeDatabaseManager(this);
   late final $BlockProfilesTable blockProfiles = $BlockProfilesTable(this);
   late final $SessionsTable sessions = $SessionsTable(this);
   late final $DailyStatsTable dailyStats = $DailyStatsTable(this);
@@ -2262,8 +2262,7 @@ typedef $$BlockProfilesTableUpdateCompanionBuilder =
     });
 
 final class $$BlockProfilesTableReferences
-    extends
-        BaseReferences<_$BallastDatabase, $BlockProfilesTable, BlockProfile> {
+    extends BaseReferences<_$KedgeDatabase, $BlockProfilesTable, BlockProfile> {
   $$BlockProfilesTableReferences(
     super.$_db,
     super.$_table,
@@ -2271,7 +2270,7 @@ final class $$BlockProfilesTableReferences
   );
 
   static MultiTypedResultKey<$SessionsTable, List<Session>> _sessionsRefsTable(
-    _$BallastDatabase db,
+    _$KedgeDatabase db,
   ) => MultiTypedResultKey.fromTable(
     db.sessions,
     aliasName: 'block_profiles__id__sessions__profile_id',
@@ -2291,7 +2290,7 @@ final class $$BlockProfilesTableReferences
 }
 
 class $$BlockProfilesTableFilterComposer
-    extends Composer<_$BallastDatabase, $BlockProfilesTable> {
+    extends Composer<_$KedgeDatabase, $BlockProfilesTable> {
   $$BlockProfilesTableFilterComposer({
     required super.$db,
     required super.$table,
@@ -2403,7 +2402,7 @@ class $$BlockProfilesTableFilterComposer
 }
 
 class $$BlockProfilesTableOrderingComposer
-    extends Composer<_$BallastDatabase, $BlockProfilesTable> {
+    extends Composer<_$KedgeDatabase, $BlockProfilesTable> {
   $$BlockProfilesTableOrderingComposer({
     required super.$db,
     required super.$table,
@@ -2488,7 +2487,7 @@ class $$BlockProfilesTableOrderingComposer
 }
 
 class $$BlockProfilesTableAnnotationComposer
-    extends Composer<_$BallastDatabase, $BlockProfilesTable> {
+    extends Composer<_$KedgeDatabase, $BlockProfilesTable> {
   $$BlockProfilesTableAnnotationComposer({
     required super.$db,
     required super.$table,
@@ -2592,7 +2591,7 @@ class $$BlockProfilesTableAnnotationComposer
 class $$BlockProfilesTableTableManager
     extends
         RootTableManager<
-          _$BallastDatabase,
+          _$KedgeDatabase,
           $BlockProfilesTable,
           BlockProfile,
           $$BlockProfilesTableFilterComposer,
@@ -2605,7 +2604,7 @@ class $$BlockProfilesTableTableManager
           PrefetchHooks Function({bool sessionsRefs})
         > {
   $$BlockProfilesTableTableManager(
-    _$BallastDatabase db,
+    _$KedgeDatabase db,
     $BlockProfilesTable table,
   ) : super(
         TableManagerState(
@@ -2729,7 +2728,7 @@ class $$BlockProfilesTableTableManager
 
 typedef $$BlockProfilesTableProcessedTableManager =
     ProcessedTableManager<
-      _$BallastDatabase,
+      _$KedgeDatabase,
       $BlockProfilesTable,
       BlockProfile,
       $$BlockProfilesTableFilterComposer,
@@ -2767,10 +2766,10 @@ typedef $$SessionsTableUpdateCompanionBuilder =
     });
 
 final class $$SessionsTableReferences
-    extends BaseReferences<_$BallastDatabase, $SessionsTable, Session> {
+    extends BaseReferences<_$KedgeDatabase, $SessionsTable, Session> {
   $$SessionsTableReferences(super.$_db, super.$_table, super.$_typedResult);
 
-  static $BlockProfilesTable _profileIdTable(_$BallastDatabase db) =>
+  static $BlockProfilesTable _profileIdTable(_$KedgeDatabase db) =>
       db.blockProfiles.createAlias('sessions__profile_id__block_profiles__id');
 
   $$BlockProfilesTableProcessedTableManager get profileId {
@@ -2789,7 +2788,7 @@ final class $$SessionsTableReferences
 }
 
 class $$SessionsTableFilterComposer
-    extends Composer<_$BallastDatabase, $SessionsTable> {
+    extends Composer<_$KedgeDatabase, $SessionsTable> {
   $$SessionsTableFilterComposer({
     required super.$db,
     required super.$table,
@@ -2865,7 +2864,7 @@ class $$SessionsTableFilterComposer
 }
 
 class $$SessionsTableOrderingComposer
-    extends Composer<_$BallastDatabase, $SessionsTable> {
+    extends Composer<_$KedgeDatabase, $SessionsTable> {
   $$SessionsTableOrderingComposer({
     required super.$db,
     required super.$table,
@@ -2938,7 +2937,7 @@ class $$SessionsTableOrderingComposer
 }
 
 class $$SessionsTableAnnotationComposer
-    extends Composer<_$BallastDatabase, $SessionsTable> {
+    extends Composer<_$KedgeDatabase, $SessionsTable> {
   $$SessionsTableAnnotationComposer({
     required super.$db,
     required super.$table,
@@ -3004,7 +3003,7 @@ class $$SessionsTableAnnotationComposer
 class $$SessionsTableTableManager
     extends
         RootTableManager<
-          _$BallastDatabase,
+          _$KedgeDatabase,
           $SessionsTable,
           Session,
           $$SessionsTableFilterComposer,
@@ -3016,7 +3015,7 @@ class $$SessionsTableTableManager
           Session,
           PrefetchHooks Function({bool profileId})
         > {
-  $$SessionsTableTableManager(_$BallastDatabase db, $SessionsTable table)
+  $$SessionsTableTableManager(_$KedgeDatabase db, $SessionsTable table)
     : super(
         TableManagerState(
           db: db,
@@ -3126,7 +3125,7 @@ class $$SessionsTableTableManager
 
 typedef $$SessionsTableProcessedTableManager =
     ProcessedTableManager<
-      _$BallastDatabase,
+      _$KedgeDatabase,
       $SessionsTable,
       Session,
       $$SessionsTableFilterComposer,
@@ -3158,7 +3157,7 @@ typedef $$DailyStatsTableUpdateCompanionBuilder =
     });
 
 class $$DailyStatsTableFilterComposer
-    extends Composer<_$BallastDatabase, $DailyStatsTable> {
+    extends Composer<_$KedgeDatabase, $DailyStatsTable> {
   $$DailyStatsTableFilterComposer({
     required super.$db,
     required super.$table,
@@ -3193,7 +3192,7 @@ class $$DailyStatsTableFilterComposer
 }
 
 class $$DailyStatsTableOrderingComposer
-    extends Composer<_$BallastDatabase, $DailyStatsTable> {
+    extends Composer<_$KedgeDatabase, $DailyStatsTable> {
   $$DailyStatsTableOrderingComposer({
     required super.$db,
     required super.$table,
@@ -3228,7 +3227,7 @@ class $$DailyStatsTableOrderingComposer
 }
 
 class $$DailyStatsTableAnnotationComposer
-    extends Composer<_$BallastDatabase, $DailyStatsTable> {
+    extends Composer<_$KedgeDatabase, $DailyStatsTable> {
   $$DailyStatsTableAnnotationComposer({
     required super.$db,
     required super.$table,
@@ -3263,7 +3262,7 @@ class $$DailyStatsTableAnnotationComposer
 class $$DailyStatsTableTableManager
     extends
         RootTableManager<
-          _$BallastDatabase,
+          _$KedgeDatabase,
           $DailyStatsTable,
           DailyStat,
           $$DailyStatsTableFilterComposer,
@@ -3273,12 +3272,12 @@ class $$DailyStatsTableTableManager
           $$DailyStatsTableUpdateCompanionBuilder,
           (
             DailyStat,
-            BaseReferences<_$BallastDatabase, $DailyStatsTable, DailyStat>,
+            BaseReferences<_$KedgeDatabase, $DailyStatsTable, DailyStat>,
           ),
           DailyStat,
           PrefetchHooks Function()
         > {
-  $$DailyStatsTableTableManager(_$BallastDatabase db, $DailyStatsTable table)
+  $$DailyStatsTableTableManager(_$KedgeDatabase db, $DailyStatsTable table)
     : super(
         TableManagerState(
           db: db,
@@ -3331,7 +3330,7 @@ class $$DailyStatsTableTableManager
 
 typedef $$DailyStatsTableProcessedTableManager =
     ProcessedTableManager<
-      _$BallastDatabase,
+      _$KedgeDatabase,
       $DailyStatsTable,
       DailyStat,
       $$DailyStatsTableFilterComposer,
@@ -3339,10 +3338,7 @@ typedef $$DailyStatsTableProcessedTableManager =
       $$DailyStatsTableAnnotationComposer,
       $$DailyStatsTableCreateCompanionBuilder,
       $$DailyStatsTableUpdateCompanionBuilder,
-      (
-        DailyStat,
-        BaseReferences<_$BallastDatabase, $DailyStatsTable, DailyStat>,
-      ),
+      (DailyStat, BaseReferences<_$KedgeDatabase, $DailyStatsTable, DailyStat>),
       DailyStat,
       PrefetchHooks Function()
     >;
@@ -3362,7 +3358,7 @@ typedef $$StreaksTableUpdateCompanionBuilder =
     });
 
 class $$StreaksTableFilterComposer
-    extends Composer<_$BallastDatabase, $StreaksTable> {
+    extends Composer<_$KedgeDatabase, $StreaksTable> {
   $$StreaksTableFilterComposer({
     required super.$db,
     required super.$table,
@@ -3392,7 +3388,7 @@ class $$StreaksTableFilterComposer
 }
 
 class $$StreaksTableOrderingComposer
-    extends Composer<_$BallastDatabase, $StreaksTable> {
+    extends Composer<_$KedgeDatabase, $StreaksTable> {
   $$StreaksTableOrderingComposer({
     required super.$db,
     required super.$table,
@@ -3422,7 +3418,7 @@ class $$StreaksTableOrderingComposer
 }
 
 class $$StreaksTableAnnotationComposer
-    extends Composer<_$BallastDatabase, $StreaksTable> {
+    extends Composer<_$KedgeDatabase, $StreaksTable> {
   $$StreaksTableAnnotationComposer({
     required super.$db,
     required super.$table,
@@ -3452,7 +3448,7 @@ class $$StreaksTableAnnotationComposer
 class $$StreaksTableTableManager
     extends
         RootTableManager<
-          _$BallastDatabase,
+          _$KedgeDatabase,
           $StreaksTable,
           Streak,
           $$StreaksTableFilterComposer,
@@ -3460,11 +3456,11 @@ class $$StreaksTableTableManager
           $$StreaksTableAnnotationComposer,
           $$StreaksTableCreateCompanionBuilder,
           $$StreaksTableUpdateCompanionBuilder,
-          (Streak, BaseReferences<_$BallastDatabase, $StreaksTable, Streak>),
+          (Streak, BaseReferences<_$KedgeDatabase, $StreaksTable, Streak>),
           Streak,
           PrefetchHooks Function()
         > {
-  $$StreaksTableTableManager(_$BallastDatabase db, $StreaksTable table)
+  $$StreaksTableTableManager(_$KedgeDatabase db, $StreaksTable table)
     : super(
         TableManagerState(
           db: db,
@@ -3509,7 +3505,7 @@ class $$StreaksTableTableManager
 
 typedef $$StreaksTableProcessedTableManager =
     ProcessedTableManager<
-      _$BallastDatabase,
+      _$KedgeDatabase,
       $StreaksTable,
       Streak,
       $$StreaksTableFilterComposer,
@@ -3517,14 +3513,14 @@ typedef $$StreaksTableProcessedTableManager =
       $$StreaksTableAnnotationComposer,
       $$StreaksTableCreateCompanionBuilder,
       $$StreaksTableUpdateCompanionBuilder,
-      (Streak, BaseReferences<_$BallastDatabase, $StreaksTable, Streak>),
+      (Streak, BaseReferences<_$KedgeDatabase, $StreaksTable, Streak>),
       Streak,
       PrefetchHooks Function()
     >;
 
-class $BallastDatabaseManager {
-  final _$BallastDatabase _db;
-  $BallastDatabaseManager(this._db);
+class $KedgeDatabaseManager {
+  final _$KedgeDatabase _db;
+  $KedgeDatabaseManager(this._db);
   $$BlockProfilesTableTableManager get blockProfiles =>
       $$BlockProfilesTableTableManager(_db, _db.blockProfiles);
   $$SessionsTableTableManager get sessions =>

@@ -13,7 +13,7 @@ import UIKit
   func didInitializeImplicitFlutterEngine(_ engineBridge: FlutterImplicitEngineBridge) {
     GeneratedPluginRegistrant.register(with: engineBridge.pluginRegistry)
     if #available(iOS 16.0, *),
-       let registrar = engineBridge.pluginRegistry.registrar(forPlugin: "BallastBlocking") {
+       let registrar = engineBridge.pluginRegistry.registrar(forPlugin: "KedgeBlocking") {
       BlockingChannelHandler.register(with: registrar)
     }
   }

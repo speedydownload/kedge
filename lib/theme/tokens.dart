@@ -1,8 +1,8 @@
 import 'package:flutter/widgets.dart';
 
-/// Ballast design tokens. Widgets must never hardcode colours, sizes, or
+/// Kedge design tokens. Widgets must never hardcode colours, sizes, or
 /// motion values — everything visual routes through this file.
-abstract final class BallastColors {
+abstract final class KedgeColors {
   // Dark (default, primary)
   static const ink = Color(0xFF0D1117);
   static const surface = Color(0xFF161C24);
@@ -26,7 +26,7 @@ abstract final class BallastColors {
   static const dividerLight = Color(0xFFE5E0D6);
 }
 
-abstract final class BallastSpacing {
+abstract final class KedgeSpacing {
   static const xs = 4.0;
   static const sm = 8.0;
   static const md = 16.0;
@@ -35,14 +35,14 @@ abstract final class BallastSpacing {
   static const xxl = 48.0;
 }
 
-abstract final class BallastRadii {
+abstract final class KedgeRadii {
   static const sm = 8.0;
   static const md = 12.0;
   static const lg = 20.0;
 }
 
 /// Motion: slow and heavy, never bouncy. The brand is "weight".
-abstract final class BallastMotion {
+abstract final class KedgeMotion {
   static const curve = Curves.easeOutCubic;
   static const standard = Duration(milliseconds: 240);
   static const shieldFadeIn = Duration(milliseconds: 400);

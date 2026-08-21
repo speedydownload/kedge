@@ -1,11 +1,11 @@
-# Ballast — Progress
+# Kedge — Progress
 
 ## Phase 0 — Setup ✅ (2026-08-20)
 
 **Done**
-- Flutter project created; bundle IDs set to `app.ballast.ios` (all six
-  pbxproj build configs) and `app.ballast.android` (namespace,
-  applicationId, MainActivity package). Display name "Ballast" on both.
+- Flutter project created; bundle IDs set to `app.kedge.ios` (all six
+  pbxproj build configs) and `app.kedge.android` (namespace,
+  applicationId, MainActivity package). Display name "Kedge" on both.
 - Theme tokens (`lib/theme/`): full colour palette dark+light, type scale
   (Fraunces/Inter — families referenced, font files land in Phase 1),
   spacing/radius/motion tokens, ThemeData built entirely from tokens.
@@ -14,8 +14,8 @@
   append-only rule documented in `lib/domain/enums.dart`.
 - Riverpod (codegen) scaffolding: keep-alive providers for database,
   analytics, purchases, blocking engine.
-- `BlockingEngine` interface + `MethodChannel('app.ballast/blocking')` /
-  `EventChannel('app.ballast/blocking_events')` implementations
+- `BlockingEngine` interface + `MethodChannel('app.kedge/blocking')` /
+  `EventChannel('app.kedge/blocking_events')` implementations
   (`IosBlockingEngine`, `AndroidBlockingEngine`). UI talks only to the
   interface.
 - RevenueCat wrapper (`pro` entitlement) and PostHog behind
@@ -37,8 +37,9 @@
 - App Store Connect record + the four entitlement requests must be filed by
   the owner (needs the Apple account). Text ready in
   `docs/entitlement-request.md`. **File these now — review can take weeks.**
-- Awaiting: Apple Team ID, RevenueCat public keys, PostHog key, support
-  email, privacy-policy domain.
+- Awaiting: Apple Team ID, RevenueCat public keys, PostHog key. (Support
+  email support@kedgefocus.com and privacy domain kedgefocus.com set with
+  the 2026-08-21 rename.)
 
 **Deviations / notes**
 - `riverpod_lint`/`custom_lint` omitted: current `custom_lint` caps at

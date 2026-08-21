@@ -1,6 +1,6 @@
 import '../../domain/enums.dart';
 
-/// Whether the platform has granted Ballast the ability to block apps.
+/// Whether the platform has granted Kedge the ability to block apps.
 /// iOS: FamilyControls authorization. Android: Usage Access + overlay.
 enum BlockingAuthorizationStatus { notDetermined, denied, approved }
 

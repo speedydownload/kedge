@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="240" height="80" viewBox="0 0 240 80">
   <!-- Mono mark at 64px height (bbox 190..322 x 82..416 scaled by 64/334),
-       "Ballast" in Fraunces 600 48px, 24px gap, baseline on the bob's vertical center. -->
+       "Kedge" in Fraunces 600 48px, 24px gap, baseline on the bob's vertical center. -->
   <g transform="translate(-36.407 -7.713) scale(0.191617)">
     <rect x="253" y="96" width="6" height="100" rx="3" fill="#F2F4F5"/>
     <circle cx="256" cy="96" r="14" fill="#F2F4F5"/>
     <path d="M 256,196 C 292,202 322,232 322,268 L 256,416 L 190,268 C 190,232 220,202 256,196 Z" fill="#F2F4F5"/>
   </g>
-  <text x="49.3" y="50.9" font-family="Fraunces" font-weight="600" font-size="48" fill="#F2F4F5">Ballast</text>
+  <text x="49.3" y="50.9" font-family="Fraunces" font-weight="600" font-size="48" fill="#F2F4F5">Kedge</text>
 </svg>

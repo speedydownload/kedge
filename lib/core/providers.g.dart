@@ -13,9 +13,8 @@ part of 'providers.dart';
 final databaseProvider = DatabaseProvider._();
 
 final class DatabaseProvider
-    extends
-        $FunctionalProvider<BallastDatabase, BallastDatabase, BallastDatabase>
-    with $Provider<BallastDatabase> {
+    extends $FunctionalProvider<KedgeDatabase, KedgeDatabase, KedgeDatabase>
+    with $Provider<KedgeDatabase> {
   DatabaseProvider._()
     : super(
         from: null,
@@ -32,24 +31,24 @@ final class DatabaseProvider
 
   @$internal
   @override
-  $ProviderElement<BallastDatabase> $createElement($ProviderPointer pointer) =>
+  $ProviderElement<KedgeDatabase> $createElement($ProviderPointer pointer) =>
       $ProviderElement(pointer);
 
   @override
-  BallastDatabase create(Ref ref) {
+  KedgeDatabase create(Ref ref) {
     return database(ref);
   }
 
   /// {@macro riverpod.override_with_value}
-  Override overrideWithValue(BallastDatabase value) {
+  Override overrideWithValue(KedgeDatabase value) {
     return $ProviderOverride(
       origin: this,
-      providerOverride: $SyncValueProvider<BallastDatabase>(value),
+      providerOverride: $SyncValueProvider<KedgeDatabase>(value),
     );
   }
 }
 
-String _$databaseHash() => r'7b1e6a9175d32314fa822a9784cd57add7c2dffd';
+String _$databaseHash() => r'7fefb6a58d0fe59608f380ac26e96184ca095275';
 
 @ProviderFor(analytics)
 final analyticsProvider = AnalyticsProvider._();

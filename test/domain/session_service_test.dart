@@ -1,13 +1,13 @@
 import 'package:drift/native.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:ballast/core/blocking/blocking_engine.dart';
-import 'package:ballast/data/db/database.dart';
-import 'package:ballast/data/repositories/profile_repository.dart';
-import 'package:ballast/data/repositories/session_repository.dart';
-import 'package:ballast/data/repositories/stats_repository.dart';
-import 'package:ballast/domain/friction_policy.dart';
-import 'package:ballast/domain/session_service.dart';
+import 'package:kedge/core/blocking/blocking_engine.dart';
+import 'package:kedge/data/db/database.dart';
+import 'package:kedge/data/repositories/profile_repository.dart';
+import 'package:kedge/data/repositories/session_repository.dart';
+import 'package:kedge/data/repositories/stats_repository.dart';
+import 'package:kedge/domain/friction_policy.dart';
+import 'package:kedge/domain/session_service.dart';
 
 final class FakeEngine implements BlockingEngine {
   final startedSessions = <String>[];
@@ -43,7 +43,7 @@ final class FakeEngine implements BlockingEngine {
 }
 
 void main() {
-  late BallastDatabase db;
+  late KedgeDatabase db;
   late FakeEngine engine;
   late SessionRepository sessions;
   late StatsRepository stats;
@@ -67,7 +67,7 @@ void main() {
   }
 
   setUp(() async {
-    db = BallastDatabase.forTesting(NativeDatabase.memory());
+    db = KedgeDatabase.forTesting(NativeDatabase.memory());
     engine = FakeEngine();
     sessions = SessionRepository(db);
     stats = StatsRepository(db);
